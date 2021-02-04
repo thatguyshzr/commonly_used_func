@@ -17,7 +17,7 @@
     | virtual env | create, activate, and deactivate virtual env |
     | open text file | open text file |
     | local image to colab | upload local image to google colab |
-    | reverse a list (pending) | |
+    | reverse a list | reverse a list |
 
 ---
 * Library specific functions:
