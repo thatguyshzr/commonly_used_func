@@ -27,3 +27,6 @@
     | sigmoid | sigmoid(num) | return sigmoid of a number or numpy array | `float` or `numpy array` |
     | scrape site | scrape_site(url, prettify) | returns content of webpage | `'bs4.BeautifulSoup'` or `str` |
 
+----------------------
+
+[![HitCount](http://hits.dwyl.com/thatguyshzr/commonly_used_func.svg)](http://hits.dwyl.com/thatguyshzr/commonly_used_func)
