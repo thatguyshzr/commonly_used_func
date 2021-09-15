@@ -1,6 +1,24 @@
 ## Basic functions
 Simple functions you don't want to bother typing.
 
+### Functions
+* [check if **prime no**](#prime)
+* [check if **odd or even**](#odd-even)
+* [sigmoid function](#sigmoid)
+* [time a function](#function-timer)
+* [check if image](#check-if-image)
+
+### References
+* [argument parser](#argument-parser)
+* [virtual environment](#virtual-env)
+* [open text file](#open-text-file)
+* [reverse a list](#reverse-a-list)
+* [local image to colab](#local-image-to-colab)
+* [create folder if it doesn't exist](#create-folder-if-it-doesnt-exist)
+
+### Library specific functions
+* [scrape site (BeautifulSoup)](#scrape-site)
+
 ### prime number
 
 
@@ -105,7 +123,7 @@ def sum(a,b):
 print(timer(sum(1,2)))
 ```
 
-### Check if image
+### check if image
 
 
 ```python
@@ -215,7 +233,8 @@ if not os.path.exists('folder_name'):
 
 
 
-### scrape site (BeautifulSoup)
+### scrape site
+BeautifulSoup
 
 
 ```python
