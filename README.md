@@ -201,7 +201,7 @@ def upload_files()
 my_images= uploaded_files
 ```
 
-### Create folder is it doesn't exist
+### create folder if it doesn't exist
 
 ```python
 import os
