@@ -105,6 +105,22 @@ def sum(a,b):
 print(timer(sum(1,2)))
 ```
 
+### Check if image
+
+
+```python
+def check_img(file):
+	'''
+	returns:
+		True: if image
+		False: if not an image
+	'''
+	if file.endswith(tuple(['jpg', 'jpeg', 'png', 'PNG', 'JPG', 'JPEG'])):
+		return True
+	else:
+		return False
+```
+
 ----------------------------------------
 ## For reference
 
@@ -183,6 +199,15 @@ def upload_files()
     return list(uploaded.keys())
 
 my_images= uploaded_files
+```
+
+### Create folder is it doesn't exist
+
+```python
+import os
+
+if not os.path.exists('folder_name'):
+    os.makedirs('folder_name')
 ```
 
 ---------------------------------------------------------------
