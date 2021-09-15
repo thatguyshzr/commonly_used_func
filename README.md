@@ -18,7 +18,7 @@ Simple functions you don't want to bother typing.
 
 ### Library specific functions
 * [scrape site (BeautifulSoup)](#scrape-site)
-
+----------------------------------------------------------
 ### prime number
 
 
