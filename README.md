@@ -216,7 +216,7 @@ def uploaded_files():
         open(k, 'wb').write(v)
     return list(uploaded.keys())
 
-my_file= uploaded_files
+my_file= uploaded_files()
 ```
 
 ### create folder if it doesn't exist
