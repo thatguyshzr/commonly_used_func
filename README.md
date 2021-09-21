@@ -209,7 +209,7 @@ upload local files to google colab
 
 
 ```python
-def upload_files():
+def uploaded_files():
     from google.colab import files
     uploaded = files.upload()
     for k, v in uploaded.items():
