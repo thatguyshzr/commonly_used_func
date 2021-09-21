@@ -13,7 +13,7 @@ Simple functions you don't want to bother typing.
 * [virtual environment](#virtual-env)
 * [open text file](#open-text-file)
 * [reverse a list](#reverse-a-list)
-* [local image to colab](#local-image-to-colab)
+* [local files to colab](#local-image-to-colab)
 * [create folder if it doesn't exist](#create-folder-if-it-doesnt-exist)
 
 ### Library specific functions
