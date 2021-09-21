@@ -204,19 +204,19 @@ x[::-1]
 # [5,4,3,2,1]
 ```
 
-### local image to colab
-upload local image to google colab
+### local files to colab
+upload local files to google colab
 
 
 ```python
-def upload_files()
+def upload_files():
     from google.colab import files
     uploaded = files.upload()
     for k, v in uploaded.items():
         open(k, 'wb').write(v)
     return list(uploaded.keys())
 
-my_images= uploaded_files
+my_file= uploaded_files
 ```
 
 ### create folder if it doesn't exist
