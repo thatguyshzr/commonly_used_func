@@ -14,6 +14,7 @@ Simple functions you don't want to bother typing.
 * [open text file](#open-text-file)
 * [reverse a list](#reverse-a-list)
 * [upload local files to colab](#local-files-to-colab)
+* [use tensorflow 1.x on colab](#use-tensorflow-1x-on-colab)
 * [create folder if it doesn't exist](#create-folder-if-it-doesnt-exist)
 
 ### Library specific functions
@@ -217,6 +218,15 @@ def uploaded_files():
     return list(uploaded.keys())
 
 my_file= uploaded_files()
+```
+
+### use tensorflow 1x on colab
+
+
+```python
+%tensorflow_version 1.x
+import tensorflow
+print(tensorflow.__version__)
 ```
 
 ### create folder if it doesn't exist
