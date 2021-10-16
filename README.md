@@ -19,6 +19,7 @@ Simple functions you don't want to bother typing.
 
 ### Library specific functions
 * [scrape site (BeautifulSoup)](#scrape-site)
+* [check for gpu (Tensorflow)](#check-for-gpu)
 ----------------------------------------------------------
 ## For reference
 
@@ -281,4 +282,13 @@ def scrape_site(url, prettify= False):
 
 # example
 print(scrap_site(url="https://en.wikipedia.org/wiki/HTML", prettify= False).title.text)
+```
+
+### check for gpu
+Tensorflow
+
+
+```python
+from tensorflow import test
+test.is_gpu_available()
 ```
