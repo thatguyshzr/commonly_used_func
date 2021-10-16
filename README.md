@@ -1,13 +1,6 @@
 ## Basic functions
 Simple functions you don't want to bother typing.
 
-### Functions
-* [check if **prime no**](#prime)
-* [check if **odd or even**](#odd-even)
-* [sigmoid function](#sigmoid)
-* [time a function](#function-timer)
-* [check if image](#check-if-image)
-
 ### References
 * [argument parser](#argument-parser)
 * [virtual environment](#virtual-env)
@@ -17,9 +10,114 @@ Simple functions you don't want to bother typing.
 * [use tensorflow 1.x on colab](#use-tensorflow-1x-on-colab)
 * [create folder if it doesn't exist](#create-folder-if-it-doesnt-exist)
 
+### Functions
+* [check if **prime no**](#prime)
+* [check if **odd or even**](#odd-even)
+* [sigmoid function](#sigmoid)
+* [time a function](#function-timer)
+* [check if image](#check-if-image)
+
 ### Library specific functions
 * [scrape site (BeautifulSoup)](#scrape-site)
 ----------------------------------------------------------
+## For reference
+
+### argument parser
+
+
+```python
+import argparse
+
+# Create the parser and add arguments
+parser = argparse.ArgumentParser()
+# Cast the input to int 
+parser.add_argument('--f', '--first', type=int, help="first number",
+                    required=False, default= 2)
+parser.add_argument('--s', '--second', type=int, help="second number",
+                    required=False, default= 3)
+
+# Parse and print the results
+args = parser.parse_args()
+
+def sum(a, b):
+    return a+b
+
+print('Output: ',sum(args.f, args.s))
+
+# example:
+# run in command prompt
+# >>> python file_name.py --f 3 --s 4
+# >>> python file_name.py --first 3 --second 4
+# >>> Output: 7
+```
+
+### virtual env
+run in cmd
+
+
+```python
+# create virtual environment named "env"
+py -m venv env
+
+# activate virtual env
+.\env\Scripts\activate
+
+# deactivate virtual env
+deactivate
+```
+
+### open text file
+
+
+```python
+with open('file.txt') as f:
+    content = f.read()
+```
+
+### reverse a list
+
+
+```python
+x= [1,2,3,4,5]
+x[::-1]
+
+# [5,4,3,2,1]
+```
+
+### local files to colab
+upload local files to google colab
+
+
+```python
+def uploaded_files():
+    from google.colab import files
+    uploaded = files.upload()
+    for k, v in uploaded.items():
+        open(k, 'wb').write(v)
+    return list(uploaded.keys())
+
+my_file= uploaded_files()
+```
+
+### use tensorflow 1x on colab
+
+
+```python
+%tensorflow_version 1.x
+import tensorflow
+print(tensorflow.__version__)
+```
+
+### create folder if it doesn't exist
+
+```python
+import os
+
+if not os.path.exists('folder_name'):
+    os.makedirs('folder_name')
+```
+
+------------------------------------------------------
 ### prime number
 
 
@@ -138,104 +236,6 @@ def check_img(file):
 		return True
 	else:
 		return False
-```
-
-----------------------------------------
-## For reference
-
-### argument parser
-
-
-```python
-import argparse
-
-# Create the parser and add arguments
-parser = argparse.ArgumentParser()
-# Cast the input to int 
-parser.add_argument('--f', '--first', type=int, help="first number",
-                    required=False, default= 2)
-parser.add_argument('--s', '--second', type=int, help="second number",
-                    required=False, default= 3)
-
-# Parse and print the results
-args = parser.parse_args()
-
-def sum(a, b):
-    return a+b
-
-print('Output: ',sum(args.f, args.s))
-
-# example:
-# run in command prompt
-# >>> python file_name.py --f 3 --s 4
-# >>> python file_name.py --first 3 --second 4
-# >>> Output: 7
-```
-
-### virtual env
-run in cmd
-
-
-```python
-# create virtual environment named "env"
-py -m venv env
-
-# activate virtual env
-.\env\Scripts\activate
-
-# deactivate virtual env
-deactivate
-```
-
-### open text file
-
-
-```python
-with open('file.txt') as f:
-    content = f.read()
-```
-
-### reverse a list
-
-
-```python
-x= [1,2,3,4,5]
-x[::-1]
-
-# [5,4,3,2,1]
-```
-
-### local files to colab
-upload local files to google colab
-
-
-```python
-def uploaded_files():
-    from google.colab import files
-    uploaded = files.upload()
-    for k, v in uploaded.items():
-        open(k, 'wb').write(v)
-    return list(uploaded.keys())
-
-my_file= uploaded_files()
-```
-
-### use tensorflow 1x on colab
-
-
-```python
-%tensorflow_version 1.x
-import tensorflow
-print(tensorflow.__version__)
-```
-
-### create folder if it doesn't exist
-
-```python
-import os
-
-if not os.path.exists('folder_name'):
-    os.makedirs('folder_name')
 ```
 
 ---------------------------------------------------------------
