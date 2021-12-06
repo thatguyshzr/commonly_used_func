@@ -19,7 +19,7 @@ Simple functions you don't want to bother typing.
 
 ### Library specific functions
 * [scrape site (BeautifulSoup)](#scrape-site)
-* [check for gpu (Tensorflow)](#check-for-gpu)
+* [check for gpu (Tensorflow/Pytorch)](#check-for-gpu)
 ----------------------------------------------------------
 ## For reference
 
@@ -291,4 +291,11 @@ Tensorflow
 ```python
 from tensorflow import test
 test.is_gpu_available()
+```
+
+Pytorch
+
+```python
+import torch
+torch.cuda.is_available()
 ```
